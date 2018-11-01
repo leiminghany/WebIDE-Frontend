@@ -29,7 +29,7 @@ class Workspace extends Component {
                 {showWelcome && <Intro handler={this.handleWelcome} />}
                 <div className="card-box">
                     <NewWs />
-                    <NewPlugin />
+                    {/* <NewPlugin /> */}
                 </div>
                 {workspaces.length > 0 && (
                     <div className="created">

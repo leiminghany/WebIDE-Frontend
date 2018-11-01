@@ -36,7 +36,7 @@ class Home extends Component {
                 </div>
                 <div className={`dash-mnav${isMbarOn ? ' on' : ''}`}>
                     <Link className="nav-item" to="/dashboard/workspace" onClick={hideMbar}>{i18n('global.workspace')} ({wsTotal})</Link>
-                    <Link className="nav-item" to="/dashboard/plugin" onClick={hideMbar}>{i18n('global.plugin')}</Link>
+                    {/* <Link className="nav-item" to="/dashboard/plugin" onClick={hideMbar}>{i18n('global.plugin')}</Link> */}
                     <Link className="nav-item" to="/dashboard/setting" onClick={hideMbar}>{i18n('global.setting')}</Link>
                     <Link className="nav-item" to="/dashboard/about" onClick={hideMbar}>{i18n('global.about')}</Link>
                     <a className="nav-item" href="https://dev.tencent.com/" target="_blank" rel="noopener noreferrer" onClick={hideMbar}>{i18n('global.tencentCloudDevPlatform')}</a>
@@ -50,10 +50,10 @@ class Home extends Component {
                     </div>
                     <div className="nav">
                         <NavLink className="nav-item" activeClassName="active" to="/dashboard/workspace">{i18n('global.workspace')} ({wsTotal})</NavLink>
-                        <NavLink className="nav-item" activeClassName="active" to="/dashboard/plugin">{i18n('global.plugin')}</NavLink>
+                        {/* <NavLink className="nav-item" activeClassName="active" to="/dashboard/plugin">{i18n('global.plugin')}</NavLink> */}
                         <NavLink className="nav-item" activeClassName="active" to="/dashboard/setting">{i18n('global.setting')}</NavLink>
                     </div>
-                    <Bell on={isBellOn} togglePanel={this.toggleBellPanel} />
+                    {/* <Bell on={isBellOn} togglePanel={this.toggleBellPanel} /> */}
                     <Profile />
                 </div>
                 <div className="dash-main">
@@ -62,7 +62,7 @@ class Home extends Component {
                         <Switch>
                             <Route exact path="/dashboard/workspace" component={Workspace}></Route>
                             <Route exact path="/dashboard/workspace/create" component={Create}></Route>
-                            <Route path="/dashboard/plugin" component={Plugin}></Route>
+                            {/* <Route path="/dashboard/plugin" component={Plugin}></Route> */}
                             <Route exact path="/dashboard/setting" component={Setting}></Route>
                             <Route exact path="/dashboard/about" component={About}></Route>
                             <Redirect to="/dashboard/workspace" />
