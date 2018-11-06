@@ -1,5 +1,7 @@
 const config = {
-    tencentOrigin: 'https://studio.dev.tencent.com',
+    devOrigin: 'https://dev.tencent.com',
+    studioOrigin: 'https://studio.dev.tencent.com',
+    qcloudOrigin: 'https://qcloud.coding.net',
     hardware: {
         cpuLimit: 2,
         memory: 2048,

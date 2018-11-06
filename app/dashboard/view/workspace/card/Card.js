@@ -10,7 +10,8 @@ import { notify, NOTIFY_TYPE } from 'components/Notification/actions';
 
 class Card extends Component {
     render() {
-        const { globalKey, ownerGlobalKey, spaceKey, ownerName, projectName, createDate, deleteTime, lastModifiedDate, workingStatus, collaborative, hasWSOpend } = this.props;
+        const { hasWSOpend, globalKey, ownerGlobalKey, spaceKey, ownerName, projectName } = this.props;
+        const { createDate, deleteTime, lastModifiedDate, workingStatus, collaborative } = this.props;
         const stopOption = {
             message: i18n('ws.stopNotice'),
             isWarn: true,
@@ -99,7 +100,7 @@ class Card extends Component {
             if (res.code === 0) {
                 handleFetch();
                 if (shouldOpen) {
-                    const url = window === window.top ? `/ws/${spaceKey}` : `${config.tencentOrigin}/ws/${spaceKey}`;
+                    const url = window === window.top ? `/ws/${spaceKey}` : `${config.studioOrigin}/ws/${spaceKey}`;
                     window.open(url);
                 } else {
                     notify({ message: res.msg });
@@ -142,7 +143,7 @@ class Card extends Component {
 }
 
 const Href = ({ invalid, spaceKey, canotOpen, handleMask, handleStop, children }) => {
-    const url = window === window.top ? `/ws/${spaceKey}` : `${config.tencentOrigin}/ws/${spaceKey}`;
+    const url = window === window.top ? `/ws/${spaceKey}` : `${config.studioOrigin}/ws/${spaceKey}`;
     const hasWorkspaceOpendOption = {
         message: i18n('ws.hasWSOpendNotice'),
         isWarn: true,
